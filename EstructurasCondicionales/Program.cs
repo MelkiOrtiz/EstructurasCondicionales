@@ -86,6 +86,29 @@ switch (tipoServicio)
         return;
 }
 Console.WriteLine($"El importe a pagar por el servicio de {tipoServicio} es: ${importe}");
+
+//----------------------------------------------------------------------------------------------------------------
+
+//4. Mostrar un Mensaje de Bienvenida en Diferentes Idiomas
+Console.WriteLine("*Bienvenida en Idiomas*");
+Console.WriteLine("Ingrese el idioma de su preferencia (español, ingles, frances):");
+string idioma = Console.ReadLine().ToLower();
+switch (idioma)
+{
+    case "español":
+        Console.WriteLine("¡Bienvenido!");
+        break;
+    case "ingles":
+        Console.WriteLine("Welcome!");
+        break;
+    case "frances":
+        Console.WriteLine("Bienvenue!");
+        break;
+    default:
+        Console.WriteLine("Idioma no válido.");
+        break;
+}
     
+
 
     
