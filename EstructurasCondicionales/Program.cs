@@ -12,11 +12,12 @@ catch (Exception ex)
 {
     Console.WriteLine("Ups ocurrio un error: " + ex.Message);
 }
-
-    static double LeerNumero()
+static double LeerNumero()
 {
     return double.Parse(Console.ReadLine());
 }
+
+
 
 // 2: Validar Edad para Ingresar a un Club
 try
@@ -41,4 +42,30 @@ catch (Exception ex)
     static int LeerEntero()
 {
     return int.Parse(Console.ReadLine());
+}
+
+
+// 3: Calcular el Precio Final de un Producto
+try
+{
+    Console.WriteLine("Ingrese el precio original del producto:");
+    double precioOriginal = LeerProducto();
+    double precioFinal = precioOriginal;
+    if (precioOriginal > 100)
+    {
+        precioFinal *= 0.9; // Aplicar descuento del 10%
+    }
+    Console.WriteLine("El precio final es: " + precioFinal);
+}
+catch (FormatException)
+{
+    Console.WriteLine("Error: Entrada inválida. Por favor, ingrese un número válido.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Error inesperado: " + ex.Message);
+}
+    static double LeerProducto()
+{
+    return double.Parse(Console.ReadLine());
 }
