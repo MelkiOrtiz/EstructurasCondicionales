@@ -119,3 +119,33 @@ catch (Exception ex)
     return int.Parse(Console.ReadLine());
 }
 
+// 6. Mostrar un Mensaje de Aprobación o Rechazo de Préstamo:
+Console.WriteLine("*6 Aprovacion o rechazo de prestamo\n");
+try
+{
+    Console.WriteLine("Ingrese el monto del préstamo:");
+    double montoPrestamo = LeerNumero();
+    Console.WriteLine("Ingrese su edad:");
+    int edad = LeerEnterooo();
+    if (montoPrestamo < 5000 || edad > 60)
+    {
+        Console.WriteLine("Préstamo aprobado.");
+    }
+    else
+    {
+        Console.WriteLine("Préstamo rechazado.");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Error inesperado: " + ex.Message);
+}
+    static double LeerNumerooo()
+{
+    return double.Parse(Console.ReadLine());
+}
+static int LeerEnterooo()
+{
+    return int.Parse(Console.ReadLine());
+}
+
