@@ -1,4 +1,6 @@
 ﻿// 1: Calcular el Mayor de Tres Números
+Console.WriteLine("*1 Calcular el mayor de tre numeros\n");
+
 try
 {
     Console.WriteLine("Ingrese tres números:");
@@ -20,6 +22,8 @@ static double LeerNumero()
 
 
 // 2: Validar Edad para Ingresar a un Club
+Console.WriteLine("*2 Validar Edad\n");
+
 try
 {
     Console.WriteLine("Ingrese su edad:");
@@ -46,6 +50,8 @@ catch (Exception ex)
 
 
 // 3: Calcular el Precio Final de un Producto
+Console.WriteLine("*3 Calcular el precio final de un producto\n");
+
 try
 {
     Console.WriteLine("Ingrese el precio original del producto:");
@@ -87,3 +93,29 @@ else
 {
     Console.WriteLine("Usuario o contraseña incorrectos.\n");
 }
+
+// 5.Determinar si un numero es par o impar
+Console.WriteLine("*5 Determinar si el numero es par o impar\n");
+
+try
+{
+    Console.WriteLine("Ingrese un número:");
+    int numero = LeerEnteroo();
+    if (numero % 2 == 0)
+    {
+        Console.WriteLine("El número es par.");
+    }
+    else
+    {
+        Console.WriteLine("El número es impar.");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Ups a ocurruido un error: " + ex.Message);
+}
+    static int LeerEnteroo()
+{
+    return int.Parse(Console.ReadLine());
+}
+
