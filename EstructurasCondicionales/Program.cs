@@ -108,6 +108,46 @@ switch (idioma)
         Console.WriteLine("Idioma no válido.");
         break;
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
+//5. Evaluar la Calificación de un Examen
+Console.WriteLine("*Evaluar la calificacion de un examen*");
+Console.WriteLine("Ingrese la calificación del examen:");
+if (int.TryParse(Console.ReadLine(), out int calificacion))
+{
+    string desempeño = "";
+    switch (calificacion)
+    {
+        case int n when (n >= 90 && n <= 100):
+            desempeño = "Sobresaliente";
+            break;
+        case int n when (n >= 80 && n < 90):
+            desempeño = "Notable";
+            break;
+        case int n when (n >= 70 && n < 80):
+            desempeño = "Aprobatoria";
+            break;
+        case int n when (n >= 60 && n < 70):
+            desempeño = "No aprobatoria";
+            break;
+        case int n when (n >= 40 && n < 50):
+            desempeño = "Reprobado. ¿Seguro que Estudiaste?";
+            break;
+        case int n when (n >= 30 && n < 40):
+            desempeño = "Reprobado. ¿Usted no aprende Verdad?";
+            break;
+        default:
+            Console.WriteLine("Calificación no válida.");
+            return;
+    }
+    Console.WriteLine($"Desempeño en el examen: {desempeño}");
+}
+else
+{
+    Console.WriteLine("Ingrese una calificación válida.");
+}
+    
     
 
 
