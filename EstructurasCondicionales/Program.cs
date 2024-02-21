@@ -69,3 +69,21 @@ catch (Exception ex)
 {
     return double.Parse(Console.ReadLine());
 }
+
+// 4.Validar Usuario Y Contraseña 
+
+Console.WriteLine("*4 Validar usuario y contraseña\n");
+string usuarioValido = "Melki"; 
+string contrasenaValida = "TilinInsano";
+Console.WriteLine("Ingrese su nombre de usuario: \n");
+string usuarioIngresado = Console.ReadLine(); 
+Console.WriteLine("Ingrese su contraseña: \n");
+string contrasenaIngresada = Console.ReadLine();
+if (usuarioIngresado == usuarioValido && contrasenaIngresada == contrasenaValida)
+{
+    Console.WriteLine("¡Acceso concedido! Bienvenido.\n");
+}
+else
+{
+    Console.WriteLine("Usuario o contraseña incorrectos.\n");
+}
