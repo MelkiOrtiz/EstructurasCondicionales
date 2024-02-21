@@ -32,9 +32,7 @@ Console.WriteLine($"El número en dígito es: {numeroEnNumero}");
 Console.WriteLine("*Dia de la semana a partir de un numero*");
 Console.WriteLine("Ingrese un número del 1 al 7 para mostrar el día de la semana:");
 int numeroDia = int.Parse(Console.ReadLine());
-
 string diaSemana = "";
-
 switch (numeroDia)
 {
     case 1:
@@ -64,5 +62,30 @@ switch (numeroDia)
 }
 
 Console.WriteLine($"El día de la semana es: {diaSemana}");
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//3.Calcular el Importe a Pagar por un Servicio
+Console.WriteLine("*Calcular el importe a pagar por un servicio*");
+Console.WriteLine("Ingrese el tipo de servicio (lavado de auto, cambio de aceite, revisión mecánica):");
+string tipoServicio = Console.ReadLine().ToLower();
+double importe = 0;
+switch (tipoServicio)
+{
+    case "lavado de auto":
+        importe = 10.00;
+        break;
+    case "cambio de aceite":
+        importe = 20.00;
+        break;
+    case "revisión mecánica":
+        importe = 30.00;
+        break;
+    default:
+        Console.WriteLine("Tipo de servicio no válido.");
+        return;
+}
+Console.WriteLine($"El importe a pagar por el servicio de {tipoServicio} es: ${importe}");
     
+
     
